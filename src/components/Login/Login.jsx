@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
   return (
@@ -15,9 +16,11 @@ export default function Login() {
                 <input type='password' id='password' className='border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600' placeholder='Enter Password...'></input>
             </div>
             <div className='mt-5'>
+                <Link to="/">
                 <button className='border-2 border-neutral-700 bg-neutral-700 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-neutral-600'>
                     Login
                     </button> 
+                </Link>    
             </div>
         </div>
     </div>
