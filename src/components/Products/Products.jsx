@@ -1,7 +1,6 @@
 // Can add more info above table
 
-import React from 'react';
-import TableContainer from './TableProduct/TableContainer'
+import TableContainer from './TableProduct/TableContainer';
 
 export default function Products() {
     return (

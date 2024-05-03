@@ -1,16 +1,22 @@
 // BUTTONS HERE NEED ONCLICK
-
-import Table from './Table'
+// import { useState } from 'react';
+import Table from './Table';
+import Button from '../../Buttons/Buttons';
+import Modal from '../../Modal/sampleText';
 
 export default function TableContainer() {
+    //const [show, setShow] = useState(false);
+    //const handleClose = () => setShow(false);
+    //const handleShow = () => setShow(true);
+
     return(
         <>
             <div className='bg-blue-50 rounded-xl rounded-b-3xl shadow-md overflow-hidden'>
                 <div className='p-3 flex justify-between'>
                     <div>
-                        <button className = 'bg-blue-500 p-2 rounded-xl text-white hover:bg-blue-600'>Add Item</button>   
+                        <Button buttonName="Add Item" buttonState="active" onClick={ Modal }/>
                     </div>
-                    <button className = 'bg-red-500 p-2 rounded-xl text-white hover:bg-red-600'>Remove Item</button>
+                    <Button buttonName="Remove Item" buttonState="decline" />
                 </div>
                 <Table />
             </div>

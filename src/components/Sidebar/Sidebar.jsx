@@ -1,8 +1,6 @@
-import React from 'react';
 import { FcMindMap } from "react-icons/fc";
 import { Link, useLocation } from "react-router-dom";
 import { HiOutlineCube, HiShoppingCart, HiOutlineLogout } from "react-icons/hi";
-import { BrowserRouter as Router } from 'react-router-dom'; 
 
 export default function Sidebar() {
   const location = useLocation();

@@ -1,4 +1,3 @@
-import React from 'react';
 import TableContainer from './TableCart/TableContainer';
 
 export default function Products() {
