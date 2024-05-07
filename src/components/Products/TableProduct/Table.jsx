@@ -1,7 +1,7 @@
 // ISSUES:
 // - if too many products it wont scroll down (can make page scroll down and make header and sidebar sticky)
 // - navigation is not per page
-
+import Button from '../../Buttons/Buttons';
 
 export default function Table() {
 
@@ -11,7 +11,7 @@ export default function Table() {
     
     return(
         <div className="overflow-x-auto"> 
-            <table className= 'table-auto min-w-full bg-white rounded-b-3xl'>
+            <table className= 'table-fixed min-w-full bg-white rounded-b-3xl'>
                 <thead className="">
                     <tr>
                         <th className={headerStyle}>Product ID</th>
@@ -19,6 +19,7 @@ export default function Table() {
                         <th className={headerStyle}>Price</th>
                         <th className={headerStyle}>Stock</th>
                         <th className={headerStyle}>Notes</th>
+                        <th className={headerStyle}>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,6 +29,11 @@ export default function Table() {
                         <td className={dataStyle}>Data 3</td>
                         <td className={dataStyle}>Data 3</td>
                         <td className={dataStyle}>Data 3</td>
+                        <td className={dataStyle}>
+                            <Button buttonName="Add to Cart" buttonState="add"/>
+                            <Button buttonName="Edit" buttonState="edit" />
+                            <Button buttonName="Delete" buttonState="delete" />
+                        </td>
                     </tr>
                     <tr className={rowStyle}>
                         <td className={dataStyle}>Data 1</td>
@@ -35,6 +41,11 @@ export default function Table() {
                         <td className={dataStyle}>Data 3</td>
                         <td className={dataStyle}>Data 3</td>
                         <td className={dataStyle}>Data 3</td>
+                        <td className={dataStyle}>
+                            <Button buttonName="Add to Cart" buttonState="add"/>
+                            <Button buttonName="Edit" buttonState="edit" />
+                            <Button buttonName="Delete" buttonState="delete" />
+                        </td>
                     </tr>
                     <tr className={rowStyle}>
                         <td className={dataStyle}>Data 1</td>
@@ -42,6 +53,11 @@ export default function Table() {
                         <td className={dataStyle}>Data 3</td>
                         <td className={dataStyle}>Data 3</td>
                         <td className={dataStyle}>Data 3</td>
+                        <td className={dataStyle}>
+                            <Button buttonName="Add to Cart" buttonState="add"/>
+                            <Button buttonName="Edit" buttonState="edit" />
+                            <Button buttonName="Delete" buttonState="delete" />
+                        </td>
                     </tr>
                 </tbody>
             </table>

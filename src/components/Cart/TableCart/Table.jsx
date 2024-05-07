@@ -3,6 +3,7 @@
 // - navigation is not per page
 
 import Modal from "../../Modal/Modal";
+import Button from '../../Buttons/Buttons';
 
 export default function Table() {
 
@@ -18,6 +19,7 @@ export default function Table() {
                         <th className={headerStyle}>Product Name</th>
                         <th className={headerStyle}>Quantity</th>
                         <th className={headerStyle}>Price</th>
+                        <th className={headerStyle}>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,16 +27,31 @@ export default function Table() {
                         <td className={dataStyle}>Item 1</td>
                         <td className={dataStyle}>Item 2</td>
                         <td className={dataStyle}>Item 3</td>
+                        <td className={dataStyle}>
+                            <Button buttonName="Add to Cart" buttonState="add"/>
+                            <Button buttonName="Edit" buttonState="edit" />
+                            <Button buttonName="Delete" buttonState="delete" />
+                        </td>
                     </tr>
                     <tr className={rowStyle} onClick={ Modal }>
                         <td className={dataStyle}>Item 1</td>
                         <td className={dataStyle}>Item 2</td>
                         <td className={dataStyle}>Item 3</td>
+                        <td className={dataStyle}>
+                            <Button buttonName="Add to Cart" buttonState="add"/>
+                            <Button buttonName="Edit" buttonState="edit" />
+                            <Button buttonName="Delete" buttonState="delete" />
+                        </td>
                     </tr>
                     <tr className={rowStyle} onClick={ Modal }>
                         <td className={dataStyle}>Item 1</td>
                         <td className={dataStyle}>Item 2</td>
                         <td className={dataStyle}>Item 3</td>
+                        <td className={dataStyle}>
+                            <Button buttonName="Add to Cart" buttonState="add"/>
+                            <Button buttonName="Edit" buttonState="edit" />
+                            <Button buttonName="Delete" buttonState="delete" />
+                        </td>
                     </tr>
                 </tbody>
             </table>
