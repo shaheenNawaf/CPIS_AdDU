@@ -1,8 +1,9 @@
-# THIS IS WHERE CRUD PATHS ARE HANDLED
+# THIS IS WHERE PATHS ARE HANDLED
 
 from django.urls import path
 from . import views
 
 urlpatterns = [ 
-    # PLACEHOLDER LNG
+    path("products/create", views.ProductCreate.as_view(), name="product-create"),
+    path("products/list", views.ProductListView.as_view(), name="product-list"),
 ]

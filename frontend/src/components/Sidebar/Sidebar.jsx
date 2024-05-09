@@ -30,7 +30,7 @@ export default function Sidebar() {
 
         <div className=' flex flex-col gap-0.5 pt-2 border-t border-neutral-700'>
           <Link
-            to="/login"
+            to="/logout"
             className={`flex items-center gap-2 font-light px-3 py-3 hover:bg-neutral-700 hover:no-underline rounded-sm text-base text-red-500`}
           >
             <HiOutlineLogout fontSize={18} />Log Out

@@ -55,7 +55,7 @@ export default function Header() {
                     )}
                   </Menu.Item>
                 </Link>
-                <Link to="/login">
+                <Link to="/Logout">
                   <Menu.Item>
                     {({ active }) => (
                       <button
