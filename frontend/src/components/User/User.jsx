@@ -13,7 +13,7 @@ export default function User() {
                     alt="Profile avatar"
                     />
                     <div>
-                    <h2 className="text-xl font-medium text-gray-800">John Doe</h2>
+                    <h2 className="text-xl font-medium text-gray-800">Mike Guevara</h2>
                     <p className="text-gray-600">Software Engineer</p>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ export default function User() {
                         <div className='w-screen h-full'>
                             <div className='my-5'>
                                 <p className="text-gray-600">Last Name</p>
-                                <p className="text-black">Mike</p>
+                                <p className="text-black">Guevara</p>
                             </div>
                             <div className='my-5'>
                                 <p className="text-gray-600">Mobile Number</p>

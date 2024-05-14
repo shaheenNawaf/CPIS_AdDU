@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import PropTypes from 'prop-types'
 
+
 export default function Buttons(props){
     //Three different states of the buttons
     const active = 'bg-blue-500 p-2 rounded-xl text-white hover:bg-blue-600 mx-1';
@@ -15,7 +16,19 @@ export default function Buttons(props){
             <button type='button' className={active}> {props.buttonName} </button>
             </>       
         );
+    }else if(props.buttonState == "active2"){
+        return(
+            <>
+            <button type='button' className={active} onClick={() => window.confirm("Are you sure")}> {props.buttonName} </button>
+            </>       
+        );
     }else if(props.buttonState == "decline"){
+        return(
+            <>
+            <button type='button' className={decline} onClick={() => window.confirm("Are you sure")}> {props.buttonName} </button>
+            </>       
+        );
+    }else if(props.buttonState == "decline2"){
         return(
             <>
             <button type='button' className={decline}> {props.buttonName} </button>

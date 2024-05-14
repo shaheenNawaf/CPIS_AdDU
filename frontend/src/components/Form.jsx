@@ -10,6 +10,7 @@ function Form({ route, method }) {
     const navigate = useNavigate();
 
     const name = method === "login" ? "Login" : "Register";
+    const hide_reg = method === "login" ? "" : "hidden";
 
     const handleSubmit = async (e) => {
         setLoading(true);
@@ -60,6 +61,10 @@ function Form({ route, method }) {
                     <div className='mt-5'>
                         <button type="submit" className='border-2 border-neutral-700 bg-neutral-700 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-neutral-600'>
                             {name}
+                        </button> 
+                        <button type="submit" hidden={hide_reg}
+                        className='border-2 border-neutral-700 bg-neutral-700 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-neutral-600 mt-2'>
+                            {"Create Account"}
                         </button> 
                     </div>
                 </div>
