@@ -1,5 +1,6 @@
 
-<h1> StoreIT. </h1>
+![image](https://github.com/shaheenNawaf/CPIS_AdDU/assets/54782362/89b717fb-bed0-41c3-b4d3-74d0e2ec64e4)
+
 <h3> Efficient and Lightweight Inventory Management System </h3>
 <br>
 
