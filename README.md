@@ -3,10 +3,10 @@
 <h3> Efficient and Lightweight Inventory Management System </h3>
 <br>
 
-## What's StockIt?
+## What's StoreIT?
 A system where the employees can view a list of available items in their inventory. Users will also be able to search for specific items using specific keywords. The system will have 2 roles that will facilitate the system, admin and employee. The admins will be able to create, edit, and delete items in the system, while the employees will be able to mostly edit items, like stocking in and stocking out quantities in the system.
 
-## More about StockIt.
+## More about StoreIT.
 It’s your one stop inventory management system to support your growing business. Features simple to navigate UI to efficiently streamline the inventory management processes of your businesses. As well as to lessen the occurence of human error in handling and managing stocks.
 
 
