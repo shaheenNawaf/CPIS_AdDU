@@ -42,7 +42,7 @@ function Add_cart(){
                         <input
                             className='border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600'
                             type="text"
-                            placeholder="Price"
+                            placeholder="Quantity"
                         />
                         <label className='block text-base mb-2'>Stock-Out Date</label>
                         <input
@@ -50,7 +50,7 @@ function Add_cart(){
                             type="date"
                             defaultValue={defaultDate}
                         />
-                        <Button buttonName="Add Stock-Out" buttonState="active2" />
+                        <Button buttonName="Add Stock-Out" buttonState="createProductConfirm" />
                         <Button buttonName="Cancel" buttonState="cancelStock" />
                 </div>
             </div>
