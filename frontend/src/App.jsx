@@ -8,6 +8,7 @@ import Products_edit from "./components/Products/Products_edit";
 import Products_add from "./components/Products/Products_add";
 import Cart from "./components/Cart/Cart";
 import Cart_add from "./components/Cart/Cart_add";
+import Cart_add_out from "./components/Cart/Cart_add_out";
 import Register from "./components/LoginRegister/Register";
 import User from "./components/User/User";
 import Errorpage from "./components/Errors/Errorpage";
@@ -38,7 +39,8 @@ function App() {
             <Route path="products/edit" element={<Products_edit />} />
             <Route path="products/add" element={<Products_add />} />
             <Route path="cart" element={<Cart />} />
-            <Route path="cart/add" element={<Cart_add />} />
+            <Route path="cart/stockin" element={<Cart_add />} />
+            <Route path="cart/stockout" element={<Cart_add_out />} />
             <Route path="user" element={<User />} />
         </Route>
 

@@ -38,19 +38,19 @@ function Add_cart(){
                                 <option key={index} value={product.id}>{product.name}</option>
                             ))}
                         </select>
-                        <label className='block text-base mb-2'>Stock-In Quantity</label>
+                        <label className='block text-base mb-2'>Stock-Out Quantity</label>
                         <input
                             className='border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600'
                             type="text"
                             placeholder="Price"
                         />
-                        <label className='block text-base mb-2'>Stock-In Date</label>
+                        <label className='block text-base mb-2'>Stock-Out Date</label>
                         <input
                             className='border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600 mb-3'
                             type="date"
                             defaultValue={defaultDate}
                         />
-                        <Button buttonName="Add Stock-In" buttonState="active2" />
+                        <Button buttonName="Add Stock-Out" buttonState="active2" />
                         <Button buttonName="Cancel" buttonState="cancelStock" />
                 </div>
             </div>

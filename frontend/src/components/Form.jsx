@@ -10,7 +10,7 @@ function Form({ route, method }) {
     const navigate = useNavigate();
 
     const name = method === "login" ? "Login" : "Register";
-    const nameNav = method == "login" ? "Create Account" : "Login";
+    const nameNav = method == "login" ? "Create Account" : "back to Login";
 
     const handleSubmit = async (e) => {
         setLoading(true);
