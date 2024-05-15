@@ -10,7 +10,7 @@ function Form({ route, method }) {
     const navigate = useNavigate();
 
     const name = method === "login" ? "Login" : "Register";
-    const hide_reg = method === "login" ? "" : "hidden";
+    const nameNav = method == "login" ? "Create Account" : "Login";
 
     const handleSubmit = async (e) => {
         setLoading(true);
@@ -31,6 +31,15 @@ function Form({ route, method }) {
             setLoading(false)
         }
     };
+
+    const registerPage = () => {
+        navigate('/register');
+    };
+    const loginPage = () => {
+        navigate('/login');
+    };
+    const page = method === "login" ? registerPage : loginPage;
+    
 
     return (
         <form onSubmit={handleSubmit} className="form-container">
@@ -62,10 +71,12 @@ function Form({ route, method }) {
                         <button type="submit" className='border-2 border-neutral-700 bg-neutral-700 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-neutral-600'>
                             {name}
                         </button> 
-                        <button type="submit" hidden={hide_reg}
+
+                        <button type="button" onClick={page}
                         className='border-2 border-neutral-700 bg-neutral-700 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-neutral-600 mt-2'>
-                            {"Create Account"}
+                            {nameNav}
                         </button> 
+
                     </div>
                 </div>
             </div>
