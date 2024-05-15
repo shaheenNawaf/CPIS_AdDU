@@ -11,6 +11,8 @@ import Cart_add from "./components/Cart/Cart_add";
 import Register from "./components/LoginRegister/Register";
 import User from "./components/User/User";
 import Errorpage from "./components/Errors/Errorpage";
+// placeholder
+import CreateProduct from "./components/Products/CreateProduct";
 
 function Logout() {
     localStorage.clear()
@@ -33,7 +35,8 @@ function App() {
             </ProtectedRoute>
             
         }>
-            <Route path="" element={<Products />} />
+            <Route path="createprod" element={<CreateProduct />} /> 
+
             <Route path="products" element={<Products />} />
             <Route path="products/edit" element={<Products_edit />} />
             <Route path="products/add" element={<Products_add />} />
