@@ -43,7 +43,7 @@ Built using the power of these awesome frameworks!
 ![image](https://github.com/shaheenNawaf/CPIS_AdDU/assets/54782362/b7202649-2b07-4537-b8a6-8e70f0df509f)
 
 ## Project Screenshots
-<a href="[url](https://drive.google.com/drive/folders/1Z9UPvSDv5lnFHtRN2iEywdAePppKElpK?usp=sharing)">Google Drive</a>
+<a href="https://drive.google.com/drive/folders/1Z9UPvSDv5lnFHtRN2iEywdAePppKElpK?usp=sharing">Google Drive</a>
 
 
 
