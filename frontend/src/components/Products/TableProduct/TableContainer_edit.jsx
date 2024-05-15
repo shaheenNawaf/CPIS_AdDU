@@ -1,22 +1,19 @@
 // BUTTONS HERE NEED ONCLICK
-// import { useState } from 'react';
-import Table from './Table';
+// YES
+
+import Table from './Table_edit';
 import Button from '../../Buttons/Buttons';
-import Modal from '../../Modal/sampleText';
 
 export default function TableContainer() {
-    //const [show, setShow] = useState(false);
-    //const handleClose = () => setShow(false);
-    //const handleShow = () => setShow(true);
-
     return(
         <>
             <div className='bg-blue-50 rounded-xl rounded-b-3xl shadow-md overflow-hidden'>
                 <div className='p-3 flex justify-between'>
                     <div>
-                        <Button buttonName="Add Item" buttonState="active" onClick={ Modal }/>
+                        <Button buttonName="Save Changes" buttonState="active2" />
+                        <Button buttonName="Cancel" buttonState="decline2" />
                     </div>
-                    {/*<Button buttonName="Remove Item" buttonState="decline"/>*/}
+                    {/*<Button buttonName="Remove Product" buttonState="decline" >*/}
                 </div>
                 <Table />
             </div>

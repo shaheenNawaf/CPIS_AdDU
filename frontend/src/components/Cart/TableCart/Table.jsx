@@ -3,6 +3,7 @@
 // - navigation is not per page
 
 import Modal from "../../Modal/Modal";
+import Button from '../../Buttons/Buttons';
 
 export default function Table() {
 
@@ -22,19 +23,22 @@ export default function Table() {
                 </thead>
                 <tbody>
                     <tr className={rowStyle} onClick={ Modal }>
-                        <td className={dataStyle}>Item 1</td>
-                        <td className={dataStyle}>Item 2</td>
-                        <td className={dataStyle}>Item 3</td>
+                        <td className={dataStyle}>Oil</td>
+                        <td className={dataStyle}>1</td>
+                        <td className={dataStyle}>350</td>
+                        <td className={dataStyle}><Button buttonName="Remove Item" buttonState="decline"/></td>
                     </tr>
                     <tr className={rowStyle} onClick={ Modal }>
-                        <td className={dataStyle}>Item 1</td>
-                        <td className={dataStyle}>Item 2</td>
-                        <td className={dataStyle}>Item 3</td>
+                        <td className={dataStyle}>Oil</td>
+                        <td className={dataStyle}>2</td>
+                        <td className={dataStyle}>700</td>
+                        <td className={dataStyle}><Button buttonName="Remove Item" buttonState="decline"/></td>
                     </tr>
                     <tr className={rowStyle} onClick={ Modal }>
-                        <td className={dataStyle}>Item 1</td>
-                        <td className={dataStyle}>Item 2</td>
-                        <td className={dataStyle}>Item 3</td>
+                        <td className={dataStyle}>Tires</td>
+                        <td className={dataStyle}>1</td>
+                        <td className={dataStyle}>560</td>
+                        <td className={dataStyle}><Button buttonName="Remove Item" buttonState="decline"/></td>
                     </tr>
                 </tbody>
             </table>
