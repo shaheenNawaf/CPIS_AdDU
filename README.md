@@ -9,7 +9,7 @@ A system where the employees can view a list of available items in their invento
 ## More about StockIt.
 It’s your one stop inventory management system to support your growing business. Features simple to navigate UI to efficiently streamline the inventory management processes of your businesses. As well as to lessen the occurence of human error in handling and managing stocks.
 
-<br>
+
 ## Website Benefits
  <ol>
   <li><a href="#">Automate parts of the business process</a></li>
@@ -19,7 +19,6 @@ It’s your one stop inventory management system to support your growing busines
     <li><a href="#">Identify product trends</a></li>
   </ol>
 
-<br>
 ## Website Features
  <ol>
   <li><a href="#">Dashboard for the Current Inventory</a></li>
@@ -29,10 +28,8 @@ It’s your one stop inventory management system to support your growing busines
     <li><a href="#">Set and Track Orders for Items</a></li>
   </ol>
 
-<br>
 ## Frameworks
-Built using the power of these awesome frameworks! (To be updated)
-
+Built using the power of these awesome frameworks!
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
