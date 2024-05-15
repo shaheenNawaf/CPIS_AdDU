@@ -34,7 +34,6 @@ function App() {
             </ProtectedRoute>
             
         }>
-
             <Route path="products" element={<Products />} />
             <Route path="products/edit" element={<Products_edit />} />
             <Route path="products/add" element={<Products_add />} />
