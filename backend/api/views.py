@@ -3,6 +3,7 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from rest_framework import generics, status
+from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import UserSerializer, ProductSerializer, InventorySerializer ,OrderSerializer, OrderItemSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
@@ -15,19 +16,25 @@ class CreateUserView(generics.CreateAPIView):
     
 class ProductCreate(generics.CreateAPIView):
     serializer_class = ProductSerializer
-    # change to IsAuthenticated 
     permission_classes = [AllowAny]
+
+class ProductDetail(APIView):
+    def delete(self, request, pk):
+        try:
+            product = Product.objects.get(pk=pk)
+            product.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        except Product.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
 class ProductListView(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    # change to IsAuthenticated 
     permission_classes = [AllowAny] 
 
 class InventoryListView(generics.ListAPIView):
     queryset = Inventory.objects.all()
     serializer_class = InventorySerializer
-    # change to IsAuthenticated 
     permission_classes = [AllowAny] 
 
 class StockInView(generics.CreateAPIView):

@@ -10,10 +10,10 @@ export default function TableContainer() {
             <div className='bg-blue-50 rounded-xl rounded-b-3xl shadow-md overflow-hidden'>
                 <div className='p-3 flex justify-between'>
                     <div>
-                        <Button buttonName="Save Changes" buttonState="active2" />
-                        <Button buttonName="Cancel" buttonState="decline2" />
+                        {/* still need one for save changes */}
+                        <Button buttonName="Save Changes" buttonState="createProduct" />
+                        <Button buttonName="Cancel" buttonState="cancelProduct" />
                     </div>
-                    {/*<Button buttonName="Remove Product" buttonState="decline" >*/}
                 </div>
                 <Table />
             </div>

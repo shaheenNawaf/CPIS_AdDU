@@ -61,11 +61,8 @@ function Add_product(){
                                 onChange={(e) => setProdDescription(e.target.value)}
                                 placeholder="Description"
                             />
-                            <button type="submit" className='border-2 border-neutral-700 bg-neutral-700 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-neutral-600'>
-                                Create Product
-                            </button> 
-                            <Button type="submit" buttonName="Create Product" buttonState="active2" />
-                            <Button buttonName="Cancel" buttonState="decline2" />
+                            <Button type="submit" buttonName="Create Product" buttonState="createProductConfirm" />
+                            <Button buttonName="Cancel" buttonState="cancelProduct" />
                     </div>
                 </div>
             </div>

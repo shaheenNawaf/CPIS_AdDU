@@ -2,7 +2,6 @@
 // - if too many products it wont scroll down (can make page scroll down and make header and sidebar sticky)
 // - navigation is not per page
 import { useState, useEffect } from 'react';
-import Button from '../../Buttons/Buttons';
 
 export default function Table() {
 
@@ -44,16 +43,19 @@ export default function Table() {
                     </tr>
                 </thead>
                 <tbody>
-                    {products.map((product, index) => (
-                        <tr className={rowStyle} key={index}>
-                            <td className={dataStyle}>{product.id}</td>
-                            <td className={dataStyle}>{product.name}</td>
-                            <td className={dataStyle}>{product.price}</td>
-                            <td className={dataStyle}>{product.description}</td>
-                            <td className={dataStyle}>{product.created_at}</td>
-                            <td><Button buttonName="Remove Product" buttonState="decline"/></td>
-                        </tr>
-                    ))}
+                    {products.map((product, index) => {
+                        const createdAtDate = new Date(product.created_at);
+                        const formattedDate = `${createdAtDate.getMonth() + 1}/${createdAtDate.getDate()}/${createdAtDate.getFullYear()}`;
+                        return (
+                            <tr className={rowStyle} key={index}>
+                                <td className={dataStyle}>{product.id}</td>
+                                <td className={dataStyle}>{product.name}</td>
+                                <td className={dataStyle}>{product.price}</td>
+                                <td className={dataStyle}>{product.description}</td>
+                                <td className={dataStyle}>{formattedDate}</td>
+                            </tr>
+                        );
+                    })}
                 </tbody>
             </table>
         </div>
