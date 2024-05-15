@@ -2,7 +2,7 @@
 
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from .models import Product, Inventory, Order, OrderItem
+from .models import Product, Inventory
 
 # User handling
 class UserSerializer(serializers.ModelSerializer):
@@ -27,50 +27,3 @@ class InventorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Inventory
         fields = ['id', 'product', 'stock', 'created_at']
-
-
-
-
-
-
-# WILL BE REMOVED
-# Order handling
-class OrderItemSerializer(serializers.ModelSerializer):
-    product = ProductSerializer(read_only=True)
-    product_id = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all(), source='product', write_only=True)
-
-    class Meta:
-        model = OrderItem
-        fields = ['id', 'product', 'product_id', 'quantity']
-
-class OrderSerializer(serializers.ModelSerializer):
-    items = OrderItemSerializer(many=True)
-    user = serializers.ReadOnlyField(source='user.username')
-
-    class Meta:
-        model = Order
-        fields = ['id', 'user', 'items', 'created_at']
-
-    def create(self, validated_data):
-        items_data = validated_data.pop('items')
-        order = Order.objects.create(**validated_data)
-        for item_data in items_data:
-            OrderItem.objects.create(order=order, **item_data)
-        return order
-
-    def update(self, instance, validated_data):
-        items_data = validated_data.pop('items')
-        instance.created_at = validated_data.get('created_at', instance.created_at)
-        instance.save()
-
-        for item_data in items_data:
-            item_id = item_data.get('id')
-            if item_id:
-                item = OrderItem.objects.get(id=item_id, order=instance)
-                item.quantity = item_data.get('quantity', item.quantity)
-                item.product = item_data.get('product', item.product)
-                item.save()
-            else:
-                OrderItem.objects.create(order=instance, **item_data)
-
-        return instance

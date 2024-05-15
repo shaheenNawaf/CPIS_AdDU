@@ -24,24 +24,3 @@ class Inventory(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
-
-# WILL BE REMOVED
-# ORDER HAS NOT BEEN TESTED
-# Order System, one to many
-class Order(models.Model):
-    # connect to user
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"Order {self.id} by {self.user.username}"
-
-class OrderItem(models.Model):
-    # connect to order
-    order = models.ForeignKey(Order, related_name='items', on_delete=models.CASCADE)
-    # connect to product
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField()
-
-    def __str__(self):
-        return f"{self.quantity} of {self.product.name}"

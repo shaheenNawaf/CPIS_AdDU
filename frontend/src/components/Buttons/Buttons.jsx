@@ -35,7 +35,7 @@ export default function Buttons(props){
     const handleRemoveProduct = async() => {
         console.log({productId: props.productId});
         try {
-            const res = await api.delete(`/api/products/${props.productId}/`);
+            const res = await api.delete(`/api/products/delete/${props.productId}/`);
             console.log("Product deleted:", res.data);
             navigate('/products/edit');
         } catch (error) {
@@ -45,6 +45,7 @@ export default function Buttons(props){
             
         }
       };
+      
 
     if(props.buttonState == "active"){
         return(

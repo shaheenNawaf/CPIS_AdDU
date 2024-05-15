@@ -5,9 +5,9 @@ from django.contrib.auth.models import User
 from rest_framework import generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializers import UserSerializer, ProductSerializer, InventorySerializer ,OrderSerializer, OrderItemSerializer
+from .serializers import UserSerializer, ProductSerializer, InventorySerializer 
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from .models import Product, Inventory, Order
+from .models import Product, Inventory
 
 class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()
@@ -26,11 +26,21 @@ class ProductDetail(APIView):
             return Response(status=status.HTTP_204_NO_CONTENT)
         except Product.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
+        
+class ProductUpdateView(generics.UpdateAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    permission_classes = [AllowAny]
 
 class ProductListView(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     permission_classes = [AllowAny] 
+    
+class ProductDetailView(generics.RetrieveAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    permission_classes = [AllowAny]
 
 class InventoryListView(generics.ListAPIView):
     queryset = Inventory.objects.all()
@@ -75,23 +85,3 @@ class StockOutView(generics.CreateAPIView):
             except Inventory.DoesNotExist:
                 return Response({'error': 'Product not found in inventory'}, status=status.HTTP_404_NOT_FOUND)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-
-
-
-
-# ORDER SYSTEM
-class OrderCreateView(generics.CreateAPIView):
-    serializer_class = OrderSerializer
-    permission_classes = [AllowAny]
-
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
-class OrderListView(generics.ListAPIView):
-    serializer_class = OrderSerializer
-    permission_classes = [AllowAny]
-
-    def get_queryset(self):
-        return Order.objects.filter(user=self.request.user)

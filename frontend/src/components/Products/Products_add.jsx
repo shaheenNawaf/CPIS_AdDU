@@ -3,14 +3,13 @@
 import TableContainer from './TableProduct/TableContainer';
 import Add_product from "./Add_product"
 
-export default function Products() {
+export default function Products_add() {
     return (
       <>
         <div id="detail">
             <TableContainer />
             <Add_product/>
         </div>
-        
       </>
     );
 }
