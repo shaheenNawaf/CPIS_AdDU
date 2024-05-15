@@ -2,7 +2,7 @@
 
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from .models import Product, Inventory
+from .models import Product
 
 # User handling
 class UserSerializer(serializers.ModelSerializer):
@@ -20,10 +20,5 @@ class UserSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ["id","name","price","description","created_at"]
+        fields = ["id","name","price","description","created_at", "stock", "date"]
 
-# Inventory handling
-class InventorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Inventory
-        fields = ['id', 'product', 'stock', 'created_at']

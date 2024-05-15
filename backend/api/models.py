@@ -17,10 +17,5 @@ class Product(models.Model):
     price = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     description = models.TextField()
-
-# Inventory System
-class Inventory(models.Model):
-    stock = models.IntegerField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-
+    stock = models.IntegerField(default=0)
+    date = models.DateTimeField(auto_now_add=True)

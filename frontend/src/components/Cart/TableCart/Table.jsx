@@ -3,7 +3,8 @@
 // - navigation is not per page
 
 import Modal from "../../Modal/Modal";
-import Button from '../../Buttons/Buttons';
+import React, { useState, useEffect } from 'react';
+
 
 export default function Table() {
 
@@ -11,32 +12,46 @@ export default function Table() {
     const rowStyle = 'hover:bg-gray-200';
     const dataStyle = 'p-4';
     
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetchProductsInventory();
+    }, []);
+
+    const fetchProductsInventory = async () => {
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/products/list?format=json');
+            
+            if (!response.ok) {
+                throw new Error('Failed to fetch products');
+            }
+            const data = await response.json();
+            console.log(data);
+            setProducts(data);
+        } catch (error) {
+            console.error('Error fetching products:', error);
+        }
+    };
+    
     return(
         <div className="overflow-x-auto"> 
             <table className= 'table-auto min-w-full bg-white rounded-b-3xl'>
                 <thead className="">
                     <tr onClick= { Modal }>
                         <th className={headerStyle}>Product Name</th>
-                        <th className={headerStyle}>Current Stock</th>
-                        <th className={headerStyle}>Stock Date</th>
+                        <th className={headerStyle}>Stock</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr className={rowStyle} onClick={ Modal }>
-                        <td className={dataStyle}>Oil</td>
-                        <td className={dataStyle}>1</td>
-                        <td className={dataStyle}>12/05/2024</td>
-                    </tr>
-                    <tr className={rowStyle} onClick={ Modal }>
-                        <td className={dataStyle}>Oil</td>
-                        <td className={dataStyle}>2</td>
-                        <td className={dataStyle}>10/05/2024</td>
-                    </tr>
-                    <tr className={rowStyle} onClick={ Modal }>
-                        <td className={dataStyle}>Tires</td>
-                        <td className={dataStyle}>1</td>
-                        <td className={dataStyle}>06/05/2024</td>
-                    </tr>
+                    {products.map((product, index) => {
+                        return (
+                            <tr className={rowStyle} key={index}>
+                                <td className={dataStyle}>{product.name}</td>
+                                <td className={dataStyle}>{product.stock}</td>
+                            </tr>
+                        );
+                    })}
                 </tbody>
             </table>
         </div>
