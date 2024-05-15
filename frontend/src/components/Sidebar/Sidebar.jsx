@@ -24,7 +24,7 @@ export default function Sidebar() {
             to="/cart"
             className={`flex items-center gap-2 font-light px-3 py-3 hover:bg-neutral-700 hover:no-underline ${location.pathname === "/cart" ? 'bg-neutral-600' : ''} rounded-sm text-base`}
           >
-            <HiShoppingCart fontSize={18} />Cart
+            <HiShoppingCart fontSize={18} />Inventory(will need renaming in code)
           </Link>
         </div>
 

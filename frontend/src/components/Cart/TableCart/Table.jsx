@@ -17,8 +17,8 @@ export default function Table() {
                 <thead className="">
                     <tr onClick= { Modal }>
                         <th className={headerStyle}>Product Name</th>
-                        <th className={headerStyle}>Quantity</th>
-                        <th className={headerStyle}>Price</th>
+                        <th className={headerStyle}>Stock</th>
+                        <th className={headerStyle}>Last Updated</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -11,15 +11,21 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Product System
+# Product 
 class Product(models.Model):
     name = models.CharField(max_length=100)
     price = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     description = models.TextField()
 
+# Inventory System
+class Inventory(models.Model):
+    stock = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
 
+# WILL BE REMOVED
 # ORDER HAS NOT BEEN TESTED
 # Order System, one to many
 class Order(models.Model):

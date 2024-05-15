@@ -3,7 +3,6 @@ import Avatar from "../Avatars/Avatar";
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { Link } from "react-router-dom";
-import Login from "../LoginRegister/Login";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
