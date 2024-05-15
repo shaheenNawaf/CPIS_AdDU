@@ -1,6 +1,6 @@
 
-<h1> CPIS </h1>
-<h3> Computer Parts Inventory System </h3>
+<h1> StoreIT. </h1>
+<h3> Efficient and Lightweight Inventory Management System </h3>
 <br>
 
 <p>
@@ -18,7 +18,7 @@ A system where the employees can view a list of available items in their invento
     <li><a href="#">Minimize risk of data loss</a></li>
     <li><a href="#">Minimize human error</a></li>
     <li><a href="#">Increase business efficiency</a></li>
-    <li><a href="#">Secure user log-in system</a></li>
+    <li><a href="#">Identify product trends</a></li>
   </ol>
 
 <br>
@@ -30,7 +30,6 @@ A system where the employees can view a list of available items in their invento
     <li><a href="#">Account profiles and control</a></li>
     <li><a href="#">Secure user log-in system</a></li>
     <li><a href="#">Set and Track Orders for Items</a></li>
-    <li><a href="#">Stock Notifications</a></li>
   </ol>
 
 <br>
@@ -38,13 +37,14 @@ A system where the employees can view a list of available items in their invento
 ## Frameworks
 Built using the power of these awesome frameworks! (To be updated)
 
-![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![Mean MongoDB](https://user-images.githubusercontent.com/54782362/209309740-55acc9a1-c6d2-4548-836c-01cbe8a30287.png)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+          
 
 ## Project Screenshots
-<p> Stay tuned. </p>
+<a href="url">link text</a>
 
 
-![GitHub followers](https://img.shields.io/github/followers/shaheenNawaf?label=Drop%20me%20a%20follow%21&style=social)
+
