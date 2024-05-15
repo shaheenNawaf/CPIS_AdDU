@@ -21,6 +21,15 @@ export default function Buttons(props){
     const editProduct = () => {
         navigate('/products/edit');
     }
+    const addStockin = () => {
+        navigate('/cart/stockin');
+    }
+    const addStockout = () => {
+        navigate('/cart/stockout');
+    }
+    const cancelStock = () => {
+        navigate('/cart');
+    }
 
     // BACKEND
     const handleRemoveProduct = async() => {
@@ -80,6 +89,18 @@ export default function Buttons(props){
     }else if(props.buttonState === "removeProduct") {
         return (
             <button type='decline' className={decline} onClick={handleRemoveProduct}> {props.buttonName} </button>
+        );
+    }else if(props.buttonState === "addStockin") {
+        return (
+            <button type='button' className={active} onClick={addStockin}> {props.buttonName} </button>
+        );
+    }else if(props.buttonState === "addStockout") {
+        return (
+            <button type='button' className={active} onClick={addStockout}> {props.buttonName} </button>
+        );
+    }else if(props.buttonState === "cancelStock") {
+        return (
+            <button type='button' className={decline} onClick={cancelStock}> {props.buttonName} </button>
         );
     }else{
         return(

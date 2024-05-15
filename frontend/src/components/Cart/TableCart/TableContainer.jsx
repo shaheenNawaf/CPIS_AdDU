@@ -14,8 +14,8 @@ export default function TableContainer() {
             <div className='bg-blue-50 rounded-xl rounded-b-3xl shadow-md overflow-hidden'>
                 <div className='p-3 flex justify-between'>
                     <div>
-                        <Button buttonName="Stock-in" buttonState="active" onClick={ Modal }/>
-                        <Button buttonName="Stock-out" buttonState="active" onClick={ Modal }/>
+                        <Button buttonName="Stock-in" buttonState="addStockin" onClick={ Modal }/>
+                        <Button buttonName="Stock-out" buttonState="addStockout" onClick={ Modal }/>
                     </div>
                     {/*<Button buttonName="Remove Item" buttonState="decline"/>*/}
                 </div>
